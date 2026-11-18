@@ -1,11 +1,14 @@
 {
-  "name": "Shift War Goals - Prototype",
+  "name": "Shift War Goals",
   "id": "com.github.DavidVTurley.Wargoal-UI-QoL",
-  "version": "0.2.0-experimental",
+  "version": "1.0.0",
   "game_id": "victoria3",
   "supported_game_version": "1.15.1",
-  "short_description": "Experimental row-only Shift-click war goal picker.",
-  "tags": [],
+  "short_description": "Shift-click to add consecutive war goals without reopening the list.",
+  "tags": [
+    "Utilities",
+    "Diplomacy"
+  ],
   "relationships": [],
   "game_custom_data": {
     "multiplayer_synchronized": false
