@@ -1,0 +1,144 @@
+types wargoal_types
+{
+	type add_wargoal_item = button {
+		using = add_war_goal_button_sound
+		onmousehierarchyenter = "[WarGoalDraft.ShowHighlight]"
+		onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+		alwaystransparent = no
+
+		block "war_goal_tooltip" {
+			tooltipwidget = {
+				FancyTooltip_WarGoalDraft = {
+					blockoverride "can_add_text" {
+						custom_tooltip_textbox = {
+							visible = "[Not(StringIsEmpty(AddWarGoalPanel.GetDiplomaticPlay.GetCanAddWarGoalDesc( WarGoalDraft.Self )))]"
+							max_width = 450
+							text = "[AddWarGoalPanel.GetDiplomaticPlay.GetCanAddWarGoalDesc( WarGoalDraft.Self )]"
+						}
+					}
+
+					blockoverride "primary_secondary_demand_text_visibility" {
+						visible = no
+					}
+				}
+			}
+		}
+
+		block "button_style" {
+			using = default_button_action
+		}
+
+		block "onclick_properties" {
+			click_modifiers = {
+				ondefault = "[Execute( AddWarGoalPanel.AccessDiplomaticPlay.AddWarGoal( WarGoalDraft.Self ) )]"
+				ondefault = "[InformationPanelBar.OpenPreviousPanel]"
+				onshift = "[Execute( AddWarGoalPanel.AccessDiplomaticPlay.AddWarGoal( WarGoalDraft.Self ) )]"
+			}
+			enabled = "[IsValid( AddWarGoalPanel.AccessDiplomaticPlay.AddWarGoal( WarGoalDraft.Self ) )]"
+		}
+
+		container = {
+			resizeparent = yes
+			minimumsize = { 550 60 }
+
+			small_flag = {
+				visible = "[WarGoalDraft.HoldsArticle]"
+				position = { 10 0 }
+				datacontext = "[WarGoalDraft.GetTarget]"
+				parentanchor = vcenter
+			}
+
+			small_flag = {
+				visible = "[Not(WarGoalDraft.HoldsArticle)]"
+				position = { 10 0 }
+				datacontext = "[WarGoalDraft.GetHolder]"
+				parentanchor = vcenter
+			}
+
+			icon = {
+				visible = "[WarGoalDraft.HoldsArticle]"
+				size = { 50 50 }
+				parentanchor = vcenter
+				position = { 70 0 }
+				texture = "[WarGoalDraft.GetArticleType.GetIcon]"
+			}
+
+			icon = {
+				visible = "[Not(WarGoalDraft.HoldsArticle)]"
+				size = { 50 50 }
+				parentanchor = vcenter
+				position = { 70 0 }
+				texture = "[WarGoalDraft.GetTexture]"
+			}
+
+			flowcontainer = {
+				position = { -15 0 }
+				parentanchor = right|vcenter
+				spacing = 10
+
+				block "maneuvers_and_infamy" {
+					flowcontainer = {
+						direction = horizontal
+						parentanchor = vcenter
+
+						textbox = {
+							visible = "[GreaterThan_CFixedPoint(WarGoalDraft.GetInfamyAmount, '(CFixedPoint)0')]"
+							using = fontsize_large
+							autoresize = yes
+							maximumsize = { 100 -1 }
+							minimumsize = { 60 -1 }
+							multiline = yes
+							parentanchor = vcenter
+							align = right|nobaseline
+							text = "WAR_GOAL_DRAFT_INFAMY"
+						}
+
+						textbox = {
+							visible = "[GreaterThan_int32(WarGoalDraft.GetManeuversCostToAdd, '(int32)0')]"
+							using = fontsize_large
+							autoresize = yes
+							maximumsize = { 100 -1 }
+							minimumsize = { 60 -1 }
+							multiline = yes
+							margin_left = 10
+							parentanchor = vcenter
+							align = right|nobaseline
+							text = "ADD_WARGOAL_MANEUVERS_COST"
+						}
+					}
+				}
+
+				flag_icon = {
+					visible = "[WarGoalDraft.HasCountryCreation]"
+					size = { 48 32 }
+					framesize = "[GetSmallFlagFrameSize]"
+					parentanchor = vcenter
+					onmousehierarchyenter = "[AccessHighlightManager.HighlightCountryFormation(WarGoalDraft.GetCountryCreation.Self)]"
+					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+					alwaystransparent = no
+
+					blockoverride "flag_tooltip" {}
+
+					block "flag_definition" {
+						texture = "[WarGoalDraft.GetCountryCreation.GetDefinition.GetFlag('release').GetSmallFlagTexture]"
+						frame = "[WarGoalDraft.GetCountryCreation.GetDefinition.GetFlag('release').GetSmallFlagFrame]"
+					}
+				}
+			}
+
+
+			textbox = {
+				position = { 125 0 }
+				using = fontsize_large
+				parentanchor = left|vcenter
+				align = nobaseline
+				using = elide_fontsize_min
+				maximumsize = { 260 -1 }
+				autoresize = yes
+				multiline = yes
+				text = "[WarGoalDraft.GetNameNoFormatting]"
+			}
+		}
+	}
+
+}

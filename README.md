@@ -1,7 +1,5 @@
-# Shift War Goals — experimental prototype
+# Shift War Goals — row-only experiment
 
-Not publication-ready. This prototype tests whether Shift-click invokes the vanilla add action without navigating away. It does not implement automatic exit when no eligible goals remain. It has not been tested in game; ordinary click, duplicate charges, context, scroll and Shift handling are unverified. Use a disposable save.
+This experiment replaces the reusable `add_wargoal_item` GUI type using `gui/00_shift_wargoal_row.gui`. It does not override the whole vanilla panel file. It may affect treaty article rows and conflict with other mods defining the same type. The row is copied from Victoria 3 1.15.1; updates to that row may require a merge.
 
-Copy the `mod` folder into `Documents/Paradox Interactive/Victoria 3/mod/shift-war-goals-prototype`, restart the launcher, and enable it in a test playset. Launch in debug mode. Test one normal click and Shift-click on two eligible Revoke Claim targets, then inspect logs/error.log. Repeat for Conquer State. Back out manually if the list is empty. Stop testing if a click adds twice or exits unexpectedly.
-
-Overrides: `gui/add_wargoal_panel.gui` in full, based on Victoria 3 1.15.1. Conflicts with other mods overriding that file. The original game installation is untouched. The metadata and Workshop publishing flow have not been verified in the launcher; provide a thumbnail and complete in-game testing before publishing.
+The user reports testing the checklist and accepting the observed effects. See TESTING.md for installation and the checklist. The previous tested version is recorded in Git commit `ebbace3`. The experiment does not implement automatic exit when no valid targets remain. Do not publish until tested.

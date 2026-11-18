@@ -1,10 +1,10 @@
 {
   "name": "Shift War Goals - Prototype",
   "id": "local.shift_war_goals.prototype",
-  "version": "0.1.0",
+  "version": "0.2.0-experimental",
   "game_id": "victoria3",
   "supported_game_version": "1.15.1",
-  "short_description": "Experimental shift-click war goal picker. Not ready for publication.",
+  "short_description": "Experimental row-only Shift-click war goal picker.",
   "tags": [],
   "relationships": [],
   "game_custom_data": {
