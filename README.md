@@ -21,3 +21,7 @@ Built and tested with Victoria 3 **1.15.1**. The mod defines the `add_wargoal_it
 Copy the contents of the repository's `mod` folder into a folder under `Documents/Paradox Interactive/Victoria 3/mod/`, then enable it in a launcher playset. The installed folder must contain `.metadata/metadata.json` and `gui/00_shift_wargoal_row.gui`. When upgrading from the earlier prototype, remove its `gui/add_wargoal_panel.gui` first.
 
 See [TESTING.md](TESTING.md) for the testing checklist. The user reported testing the checklist and accepting the observed effects; individual results were not recorded.
+
+## Template initialization
+
+The repository was created from the Victoria 3 mod template. Metadata has been initialized manually and the unused example event and on-action scripts removed. Do not run the template initialization workflow on this existing mod without reviewing it: it rewrites metadata and processes repository files. The gameplay mod does not require those example scripts.

@@ -1,6 +1,6 @@
 {
   "name": "Shift War Goals - Prototype",
-  "id": "local.shift_war_goals.prototype",
+  "id": "com.github.DavidVTurley.Wargoal-UI-QoL",
   "version": "0.2.0-experimental",
   "game_id": "victoria3",
   "supported_game_version": "1.15.1",
@@ -10,5 +10,5 @@
   "game_custom_data": {
     "multiplayer_synchronized": false
   },
-  "picture": "thumbnail.jpg"
+  "picture": "thumbnail.png"
 }
