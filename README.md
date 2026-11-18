@@ -22,6 +22,6 @@ Copy the contents of the repository's `mod` folder into a folder under `Document
 
 See [TESTING.md](TESTING.md) for the testing checklist. The user reported testing the checklist and accepting the observed effects; individual results were not recorded.
 
-## Template initialization
+## Repository structure
 
-The repository was created from the Victoria 3 mod template. Metadata has been initialized manually and the unused example event and on-action scripts removed. Do not run the template initialization workflow on this existing mod without reviewing it: it rewrites metadata and processes repository files. The gameplay mod does not require those example scripts.
+The `mod` folder contains the files used by the game. `image` keeps the source artwork; `documentation` and `script` are reserved for future project documentation and tools. The unused template artwork, localization scripts and initialization workflow have been removed.
