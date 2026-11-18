@@ -24,4 +24,4 @@ See [TESTING.md](TESTING.md) for the testing checklist. The user reported testin
 
 ## Repository structure
 
-The `mod` folder contains the files used by the game. `image` keeps the source artwork; `documentation` and `script` are reserved for future project documentation and tools. The unused template artwork, localization scripts and initialization workflow have been removed.
+The `mod` folder contains the files used by the game. `image` keeps the source artwork; `documentation` is reserved for future project documentation. The unused template artwork, localization scripts and initialization workflow have been removed.
