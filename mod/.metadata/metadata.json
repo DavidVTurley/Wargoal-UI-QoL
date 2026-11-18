@@ -9,5 +9,6 @@
   "relationships": [],
   "game_custom_data": {
     "multiplayer_synchronized": false
-  }
+  },
+  "picture": "thumbnail.jpg"
 }
