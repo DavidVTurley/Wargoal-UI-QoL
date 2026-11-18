@@ -1,4 +1,4 @@
-# Shift War Goals
+# Wargoal UI QoL
 
 Add multiple war goals without reopening the target list after each one.
 
@@ -8,4 +8,4 @@ The list does not close automatically when no eligible or affordable targets rem
 
 **Compatibility:** Tested on Victoria 3 1.15.1. Mods that redefine the `add_wargoal_item` UI type may conflict. Multiplayer compatibility has not been independently verified.
 
-**Manual installation:** Copy the repository's `mod` folder into `Documents/Paradox Interactive/Victoria 3/mod/`, give it a name such as `shift-war-goals`, and enable it in the launcher.
+**Manual installation:** Copy the repository's `mod` folder into `Documents/Paradox Interactive/Victoria 3/mod/`, give it a name such as `Wargoal-UI-QoL`, and enable it in the launcher.
