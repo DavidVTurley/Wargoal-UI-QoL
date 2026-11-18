@@ -1,9 +1,0 @@
-Add multiple war goals of the same type without repeatedly reopening the target list.
-
-During a diplomatic play, select a war-goal type, then hold Shift and click each eligible target. Each click adds a demand immediately. Click normally to add a final demand and return to the previous panel, or use Back/Escape to leave.
-
-The game continues to handle eligibility, maneuver costs and demand effects. Some treaty-article rows use the same interface and may also respond to Shift-click.
-
-Known limitation: the list does not close automatically when no eligible or affordable targets remain; use Back or Escape.
-
-Compatibility: made for Victoria 3 1.15.1. This mod replaces the add_wargoal_item GUI type, so it may conflict with other mods that replace the same type. Multiplayer compatibility has not been independently verified.
